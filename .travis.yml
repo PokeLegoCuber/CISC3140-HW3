@@ -1,0 +1,15 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+script:
+- python -m unittest discover
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: e0YvB69+r/8nQ9G/mXG0QtuRwqD6OAvsOM2qjLNiVAhOhPvw0D9aENyUaOsKMC3ZWRPY5aQsNdhAJyLFn6OAh5uBKRew9Lo3PfVxT0Nt0UrondGc6hNasL+xFlCZz1oSZAdzICvD+PgLfdYr3/Q2O0rattbD/6EMnqR18w7m/2zOKJDdvJB5rY+DiKDpAUKKcv+shSLB3ZLEVuVAlWXCKP4Yj0xEqiuZ9xfzOUd/qjyucSsisC1e7dYYPubs5lZSf5FZollAp1p0Z0CvGN2dJchB6XUAYXisvOIlehM91yF+oWdF3N7ZXQd94d2OpaKSHh95bN8tBAbqXN1vbyj1Dloqez0cWFLLhzI18j7GK4/33dTQnCxJG8LXviofQ9I898OUBpYehJ3+0mr6aXJziLNWvcegSEWJ9vesUjU85MAmLk6m+pSU7GXsFkEOvVUyfwFccvxUkQVuuktXv2lu/tojkrtrap+vMx4WNmN320jUNZM1EY8Ib9TIJ8+IV/VKq6tM3FmtJS4+XJaGWYiLVaYZJUq/2dZtG/x40VUKT9GuKDDn3dfJoyiSFnP0eyFILi019AvwXMsB4SOrdySEXezZd6Wy3kSXCbS8J27h0a6ODeNZM43J5ZJ3dVkbJ37qsPh1VnFIN4S4an4rrAHaUY7+iLjOS+WWtRvizJWPioM=
+  app: cisc3140hw3
